@@ -59,33 +59,7 @@ public class CS30SDecemberExamRationalClient
         rational2.setDenominator(0);        
         System.out.println("Rational 2: " + rational2);
         
-        /* *********************** Part b ************************** */
-
-        System.out.println();
-        System.out.println("---- Part B Multiply and Divide ----" + nl);
-        Rational product = new Rational();
-        Rational quotient = new Rational();
-
-        product.multiply(rational1, rational2);
-        System.out.println(rational1 + " * " + rational2 + " = " + product);
         
-        product.divide(rational1, rational2);
-        System.out.println(rational1 + " / " + rational2 + " = " + product);
-        
-        
-        /* *********************** Part c ************************** */
-        
-        System.out.println();
-        System.out.println("---- Part C ArrayList ----" + nl);
-        
-
-
-        /* *********************** Part d ************************** */
-
-        System.out.println();
-        System.out.println("---- Part D Adding and Reducing ----" + nl);
-        
-
         // ***** closing message *****
         
         System.out.println("end of program");
