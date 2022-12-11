@@ -28,7 +28,11 @@ public class Rational
     // full-arg constructor
     public Rational (int numerator, int denominator){
         this.numerator = numerator;
-        this.denominator = denominator;
+        if(this.denominator == 0){
+            this.denominator = 1;
+        } else {
+            this.denominator = denominator;
+        }
     } // end full-arg constructor
     
     // getters
@@ -43,10 +47,24 @@ public class Rational
     public void setNumerator (int setNum) {
         numerator = setNum;
     } // end setNumerator
-    public void setDenominator (int setDen) {
-        denominator = setDen;
+    public void setDenominator (int setDen) { 
+        if(setDen == 0){
+            denominator = 1;
+        }else{
+            denominator = setDen;
+        }
     } // end setDenominator
-    
+
+    public Rational multiply (Rational operand1, Rational operand2){
+        this.numerator = operand1.getNumerator() * operand2.getNumerator();
+        this.denominator =operand1.getDenominator() * operand2.getDenominator();
+        return this;
+    } // end multiply
+    public Rational divide (Rational operand1, Rational operand2){
+        this.numerator = operand1.getNumerator() * operand2.getDenominator();
+        this.denominator =operand1.getDenominator() * operand2.getNumerator();
+        return this;
+    } // end divide
     @Override
     public String toString(){
         String s = getNumerator() + "/" + getDenominator();
